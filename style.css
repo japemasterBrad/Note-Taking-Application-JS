@@ -1,0 +1,23 @@
+
+#text-box {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.text-box {
+    margin-top: 20px;
+}
+
+
+.title-box p {
+    text-align: center;
+}
+
+.title-box h1 {
+    text-align: center;
+}
+
+.text-box-col {
+    display: block;
+}
