@@ -1,12 +1,12 @@
-let noteName = $("#title-text-box");
-let noteBody = $("#body-text-box");
+let noteName = document.getElementById("#title-text-box");
+let noteBody = document.getElementById("#body-text-box");
+let btn = document.getElementsByClassName("#btn");
 
-let button = $("#btn").on('click', function() {
-    console.log(noteName.val);
-    console.log(noteBody.val);
+$("#btn").on("click", function() {
+    console.log("click");
 })
 
-dict = {
+noteTemplate = {
     "Name" : noteName,
     "Body" : noteBody
 };
