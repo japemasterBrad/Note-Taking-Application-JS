@@ -1,0 +1,27 @@
+{
+    "notes": [
+        {
+            "name": "shopping list", 
+            "body": "bread, milk, cheese"
+        },
+        {
+            "name": "app idea", 
+            "body": "Shopping, but you're selling this time"
+        },
+        {
+            "name": "fuck Fred", 
+            "body": "That guy fucking SUUUUCKS"
+        }
+    ]
+}
+
+[
+    {
+        "name" : "Ashwin",
+        "age" : "20"
+    },
+    {
+        "name" : "Abhinandan",
+        "age" : "20"
+    }
+];

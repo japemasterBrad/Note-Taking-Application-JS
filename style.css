@@ -19,3 +19,8 @@
 .text-box-col {
     display: block;
 }
+
+#view-notes {
+    height: 300px;
+    background-color: red;
+}
