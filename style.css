@@ -1,3 +1,11 @@
+:root {
+    --window-background : rgba(113, 130, 192, 0.3);
+    --border-radius : 10px;
+    --window-padding : 30px;
+    --note-padding : 15px;
+}
+
+
 #text-box {
     display: flex;
     justify-content: center;
@@ -18,9 +26,35 @@
 
 .text-box-col {
     display: block;
+    padding: var(--window-padding);
+    border-radius: var(--border-radius);
+    background-color: var(--window-background);
+    border: 1px black solid;
+
 }
 
 #view-notes {
-    height: 300px;
-    background-color: red;
+    background-color: rgba(29, 39, 73, 0.3);
+    display: inline-block;
+    flex-flow: row wrap;
+    align-items: flex-start;
+}
+
+.note {
+    display: block;
+    background-color: white;
+    border: 1px black solid;
+    width: 280px;
+    height: auto;
+    order: 5;
+    margin: var(--window-padding);
+    float: left;
+}
+
+.note-name {
+    padding: var(--note-padding);
+}
+
+.note-body {
+    padding: var(--note-padding);
 }

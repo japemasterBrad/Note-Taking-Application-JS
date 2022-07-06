@@ -8,21 +8,21 @@ let btn = document.getElementById("btn");
 // console.log(parsedNote[0].name);
 
 btn.addEventListener("click", function() {
+    saveNote(name, body);
+});
+
+function saveNote(name, body) {
     const fs = require("fs");
-
+    
     let newNote = {
-        name : __name,
-        body : __body
+        name : name,
+        body : body
     };
-
+    
     let data = JSON.stringify(newNote);
     console.log(data);
-
+    
     // PUSH INTO JSON FILE
-    fs.writeFile('./notes.json', data, (err) => {
-        if (err) {
-            throw err;
-        }
-        console.log("JSON data was saved");
-    });
-})
+    fs.writeFile("notes.json", data)
+        console.log("JSON data was saved")
+}
