@@ -22,15 +22,15 @@
                     <div class="container">
                         <div class="row">
                             <div class="col text-box-col">
-                                <form method="GET" class="form">
+                                <form class="form">
 
-                                    <label for="noteName">Title</label>
-                                    <input name="noteName" id="title-text-box" type="text"><br>
+                                    <label id="noteName" for="noteName">Title</label>
+                                    <input id="input-note-title" type="text"><br>
                                     
                                     <br>
 
                                     <label for="body-text-box">Body</label>
-                                    <input name="noteBody" id="body-text-box" type="text"><br><br>
+                                    <input id="input-note-body" type="text"><br><br>
                                     
                                     <button id="btn" class="btn btn-primary">Submit</button>
                                 </form>
@@ -44,16 +44,12 @@
     </div>
     
     <div class="view-notes">
-        <div class="note">
-            <h3 class="note-name">Lorem ipsum</h3>
-            <p class="note-body">Lorem ipsum doum numquam distinctio voluptate, adipisci eaque saepe possimus modi?  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio itaque quaerat blanditiis natus officia consequuntur error id amet quisquam deleniti sit dos modi?</p>
-        </div>
+        
     </div>
 
     <script src="/jquery.js"></script>
-    <script src="/index.js"></script>
+    <script type="module" src="/index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-    <script src="notes.json"></script>
 </body>
 </html>
 

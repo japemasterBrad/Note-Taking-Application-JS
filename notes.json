@@ -1,5 +1,14 @@
-[
+[  
     {
-        "noteName" : 
+        "title" : "Title one",
+        "body" : "body one"
+    },
+    {
+        "title" : "title two",
+        "body" : " body two"
+    },
+    {
+        "title" : "title three",
+        "body" : "body three"
     }
 ]
