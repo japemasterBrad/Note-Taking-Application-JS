@@ -1,0 +1,120 @@
+import jsonNotes from "./notes.json" assert {type: 'json'};
+
+let btn = document.getElementById("btn");
+let titleInput = document.getElementById("input-note-title");
+let bodyInput = document.getElementById("input-note-body");
+let noteSection = document.getElementsByClassName("view-notes");
+
+btn.addEventListener("click", function() {
+    let title = titleInput.value;
+    let body = bodyInput.value;
+
+    localStorage.setItem("title", title);
+    localStorage.setItem("body", body);
+
+    saveNote(title, body);
+})
+
+
+function createNote(title, body) {    
+    let note = document.createElement("div"); 
+    note.classList.add("note");    
+
+    let noteHeader = document.createElement("h3"); 
+    noteHeader.classList.add("note-title")    
+    noteHeader.innerText = title;
+    
+    let noteBody = document.createElement("p");
+    noteBody.classList.add("note-body");
+    noteBody.innerText = body; 
+
+    note.append(noteHeader);
+    note.append(noteBody);
+
+    $(".view-notes").append(note);
+}
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING 
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING 
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING 
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING 
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING 
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING 
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING 
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING 
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING 
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING 
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING 
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING 
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+// ONCE SAVING IS FINISHED, THIS APP IS WORKING
+
+function saveNote(title, body) {
+    let newNote = {
+        "title" : localStorage.setItem("title", title),
+        "body" : localStorage.setItem("body", body)
+    };
+
+    let data = JSON.stringify(newNote);
+
+    jsonNotes.push(data);
+    
+
+    loadAllNotes();
+}
+
+
+function loadAllNotes() {
+    $(noteSection).children().remove();
+
+    for(let i = 0; i < jsonNotes.length; i++) {
+        createNote(jsonNotes[i]["title"], jsonNotes[i]["body"]);
+    }
+}
+
+loadAllNotes();
