@@ -1,13 +1,13 @@
 import jsonNotes from "./notes.json" assert {type: 'json'};
-import require from "./require-2.3.6"
+// import require from "./require-2.3.6"
 
 let btn = document.getElementById("btn");
 let titleInput = document.getElementById("input-note-title");
 let bodyInput = document.getElementById("input-note-body");
 let noteSection = document.getElementsByClassName("view-notes");
 
-        // not recognising require
-const fs = require('fs');
+// not recognising require
+// const fs = require('fs');
 
 btn.addEventListener("click", function() {
     let title = titleInput.value;
@@ -61,6 +61,9 @@ function loadAllNotes() {
 }
 
 loadAllNotes();
+console.log(jsonNotes.length)
+console.log(jsonNotes.length)
+console.log(jsonNotes.length)
 console.log(jsonNotes.length)
 
 
